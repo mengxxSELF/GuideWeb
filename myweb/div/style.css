@@ -1,0 +1,471 @@
+body {
+  padding: 0;
+  margin: 0;
+  font: "微软雅黑" 14px;
+  text-transform: capitalize;
+}
+/*common information*/
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+.borderW {
+  border: 1px  solid #fff;
+}
+a {
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+}
+a:hover {
+  text-decoration: none;
+}
+.back-color-f {
+  background: #fff;
+}
+.back-color-page {
+  background: #826650;
+}
+.color-f {
+  color: #fff;
+}
+.color-page {
+  color: #826650;
+}
+.pos-r {
+  position: relative;
+}
+.pos-a {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.btn-theme {
+  color: #fff;
+  background-color: #826650;
+  border-color: #826650;
+}
+.box-shadow {
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.25);
+}
+.transition {
+  transition: all ease 0.5s;
+}
+h3.heading {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #E5E5E5;
+  position: relative;
+  font-size: 20px;
+}
+h3.heading::after {
+  content: ' ';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: -1px;
+  z-index: 99;
+  width: 100px;
+  border-bottom: 1px solid red;
+}
+header {
+  background: #fff;
+  box-shadow: 0 1px 4px 1px rgba(0, 0, 0, 0.25);
+}
+header a {
+  padding: 10px;
+  color: #826650;
+}
+.carousel-inner .item {
+  max-height: 500px;
+  overflow: hidden;
+}
+.carousel-inner p {
+  display: inline-block;
+  padding: 6px 20px;
+  margin: 10px auto;
+  border: 1px solid #826650;
+  background: rgba(130, 102, 80, 0.5);
+}
+.margin-top20 {
+  margin-top: 20px;
+}
+.about-me {
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.05);
+}
+.about-me p {
+  font-weight: bold;
+  font-size: 24px;
+}
+.about-me span {
+  display: block;
+  line-height: 24px;
+}
+.about-me li {
+  margin-bottom: 10px;
+}
+.about-me b {
+  display: inline-block;
+  margin-right: 10px;
+}
+.about-me button {
+  color: #fff;
+  transition: all ease 0.5s;
+  padding: 6px 30px;
+}
+.about-me button:hover {
+  color: #826650;
+  background: #fff;
+}
+.about-me .fa {
+  font-size: 24px;
+  margin-right: 10px;
+}
+.seemore {
+  background: #826650;
+  color: #fff;
+  padding: 6px  20px;
+  transition: all ease 0.5s;
+  border: 1px solid #826650;
+}
+.seemore:hover {
+  color: #826650;
+  background: #fff;
+}
+.past p {
+  line-height: 24px;
+}
+.project a:first-of-type {
+  display: block;
+  position: relative;
+  max-height: 300px;
+  overflow: hidden;
+}
+.project a:first-of-type::after {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  transition: all ease 0.5s;
+  content: ' + ';
+  background: rgba(130, 102, 80, 0.5);
+  left: 0;
+  top: 0;
+  font-size: 30px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #F1F1F1;
+  text-align: center;
+  line-height: 300px;
+}
+.project a:hover::after {
+  opacity: 1;
+}
+.project a:hover img {
+  transform: scale(1.1);
+}
+.project img {
+  width: 100%;
+  transition: all ease 0.5s;
+}
+.project a:last-of-type {
+  text-align: left;
+}
+.project h4 {
+  display: block;
+  padding: 15px 0;
+}
+/*work*/
+.works {
+  background: rgba(130, 102, 80, 0.5);
+}
+.works .swiper-slide {
+  background: #fff;
+  width: 300px;
+  height: 300px;
+}
+.works .swiper-slide a {
+  display: block;
+}
+.works .swiper-slide figure {
+  height: 200px;
+  overflow: hidden;
+  width: 100%;
+}
+.works .swiper-slide figure img {
+  width: 100%;
+}
+.works .border {
+  display: block;
+  margin: 20px auto;
+  padding: 6px 10px ;
+  border: 1px solid #826650;
+  width: 200px;
+  background: #fff;
+  color: #826650;
+  transition: all ease 0.5s;
+}
+.works .border:hover {
+  color: #fff;
+  background: #826650;
+}
+.works-infor {
+  background: #fff;
+  padding: 20px;
+  overflow: hidden;
+  color: #826650;
+}
+.works-infor i {
+  display: block;
+  float: left;
+  background: rgba(130, 102, 80, 0.5);
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  line-height: 30px;
+  text-align: center;
+}
+.works-infor b {
+  display: block;
+  float: left;
+  margin-left: 20px;
+  line-height: 34px;
+}
+.swiper-pagination-bullet-active {
+  background: #826650;
+}
+footer {
+  background: #826650;
+  padding: 20px;
+  color: #fff;
+}
+footer li {
+  margin-bottom: 10px;
+}
+footer i {
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+footer .figures a {
+  height: 60px;
+  overflow: hidden;
+  margin: 3px;
+}
+footer .figures img {
+  width: 50px;
+  opacity: 0.6;
+}
+footer .figures img:hover {
+  opacity: 1;
+}
+.else i {
+  padding-top: 5px;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  color: #826650;
+  font-size: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+.blogs a {
+  overflow: hidden;
+}
+.blogs a:hover img {
+  opacity: 1;
+}
+.blogs figure {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  float: left;
+}
+.blogs img {
+  width: 100%;
+  opacity: 0.6;
+}
+.blogs b {
+  display: inline-block;
+  margin-left: 10px;
+  color: #fff;
+  float: left;
+  line-height: 50px;
+}
+.work-name {
+  margin-bottom: 10px;
+}
+.work-name li {
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  padding: 6px 10px;
+  transition: all ease 0.5s;
+  cursor: pointer;
+  color: #fff;
+  background: rgba(130, 102, 80, 0.5);
+  text-align: center;
+}
+.work-name li:hover {
+  background: #826650;
+}
+.work-name li.active {
+  background: #826650;
+}
+.work-content {
+  background: rgba(130, 102, 80, 0.5);
+  background: #fff;
+}
+.work-content .swiper-slide {
+  background: #fff;
+  width: 300px;
+  height: 300px;
+}
+.work-content .swiper-slide a {
+  display: block;
+}
+.work-content .swiper-slide figure {
+  height: 200px;
+  overflow: hidden;
+  width: 100%;
+}
+.work-content .swiper-slide figure img {
+  width: 100%;
+}
+.work-content .border {
+  display: block;
+  margin: 20px auto;
+  padding: 6px 10px ;
+  border: 1px solid #826650;
+  width: 200px;
+  background: #fff;
+  color: #826650;
+  transition: all ease 0.5s;
+}
+.work-content .border:hover {
+  color: #fff;
+  background: #826650;
+}
+.work-content a {
+  display: block;
+}
+.work-content figure {
+  height: 190px;
+  overflow: hidden;
+}
+.work-content img {
+  width: 100%;
+}
+.work-content .works-infor {
+  border: 1px solid rgba(130, 102, 80, 0.5);
+  border-top: none;
+}
+.work-content > div {
+  margin-bottom: 20px;
+}
+.top {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  padding: 6px 10px;
+  display: none;
+  background: rgba(130, 102, 80, 0.5);
+  border: 1px solid #ffffff;
+  color: #fff;
+  border-radius: 3px ;
+  text-transform: capitalize;
+  transition: all ease 0.5s;
+}
+.top:hover {
+  color: #fff;
+  background: rgba(130, 102, 80, 0.5);
+}
+/*关于我*/
+.about p:first-of-type::first-letter {
+  display: block;
+  font-size: 30px;
+}
+.about p {
+  line-height: 24px;
+}
+.show-img {
+  position: relative;
+  margin-top: 60px;
+}
+.show-img figure {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin: 0 auto;
+  background: url(../img/17.jpg) no-repeat center;
+  transition: all ease 0.5s;
+  transition-duration: 0.2s;
+}
+.show-img figure::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 14px solid rgba(255, 255, 255, 0.5);
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.show-img:hover figure {
+  transform: translate(60px) scale(0.5);
+}
+.show-img:hover .words {
+  transform: translateX(250px);
+  z-index: -1;
+  opacity: 1;
+}
+.words {
+  position: absolute;
+  left: 0;
+  top: 0;
+  left: -200px;
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  padding: 20px;
+  background: #826650;
+  text-align: center;
+  color: #fff;
+  transition: all ease 0.5s;
+  transition-duration: 0.2s;
+}
+@media screen and (max-width: 980px) {
+  .show-img {
+    display: none;
+  }
+}
+.about-duty {
+  position: relative;
+  overflow: hidden;
+  background: rgba(130, 102, 80, 0.5);
+  color: #fff;
+  text-align: center;
+}
+.about-duty .fa {
+  font-size: 40px;
+}
+.about-duty > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.about-duty p {
+  margin: 20px;
+}
+.progress-bar {
+  background: #826650;
+}

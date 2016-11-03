@@ -1,0 +1,224 @@
+
+body{ padding: 0; margin: 0;font: "微软雅黑" 14px; text-transform: capitalize;  }
+/*common information*/
+@color:#826650; // 主色调
+@color0:rgba(0,0,0,0.5);// 黑色透明度
+@color-rgba:rgba(130,102,80,0.5); // 主色调透明度
+@color-rgba-f:rgba(255,255,255,0.5); // 白色调透明度
+
+
+
+
+ul{padding: 0;margin: 0;}
+li{list-style: none;}
+.borderW {border: 1px  solid #fff;}
+a{text-align: center;cursor:pointer; display:inline-block;
+  &:hover{ text-decoration: none;}
+  }
+  
+  //margin 
+.margin(@size){margin:@size ;} 
+.margin-top(@size:10px){margin-top:@size ;}
+.margin-bottom(@size:20px){margin-bottom:@size ;}
+
+
+.padding(@size:20px){padding:@size ;} 
+
+// border
+.border(@width:1px , @colors:@color){border:@width solid @colors;} // border
+.border-btm(@width:1px , @colors:@color){border-bottom:@width solid @colors;} // border-bottom
+
+
+
+
+// 关于背景
+.back-color-f{background: #fff;} //背景色是白色
+.back-color-page{background: @color;} //背景色是网页用色
+
+.back-img(@url){background-image: @url;background-repeat:no-repeat;background-size: 100% 100%;} //关于背景图片
+
+.back-rgba-b(@level:0.5){background:rgba(0,0,0,@level)} // 背景是黑色透明度
+.back-rgba-f(@level:0.5){background:rgba(255,255,255,@level)} // 背景是白色透明度
+.back-rgba-page(@level:0.5){background: rgba(130,102,80,@level)} // 背景是网页色透明度
+
+
+//字体颜色
+.color-f{color:#fff;} //字体颜色是白色
+.color-page{color:@color;} //字体颜色是网页用色
+
+
+// 关于定位问题
+.pos-r{position: relative;}  
+.pos-a{position: absolute;}
+
+//关于长宽相等
+.width-height(@measure){ width: @measure; height: @measure;overflow: hidden; }
+
+//关于button
+.btn-theme{
+    color: #fff;
+    background-color: @color;
+    border-color: @color;
+}
+
+// 关于边框阴影
+.box-shadow{box-shadow:0 1px 4px 1px rgba(0,0,0,.25);}
+
+.transition{
+    transition: all ease 0.5s; 
+}
+
+
+
+
+h3.heading{ padding-bottom:10px;margin-bottom:20px;    border-bottom:1px solid #E5E5E5;.pos-r;font-size: 20px;
+    &::after{ content: ' ';
+         .pos-a;left: 0;bottom:-1px; z-index:99;width: 100px;border-bottom: 1px solid red;
+     }
+ }
+
+
+//头部导航
+header{.back-color-f;.box-shadow;
+   a{ padding:10px;.color-page;  }
+ }
+ .carousel-inner {
+     .item{max-height: 500px; overflow: hidden;}
+     p{ display: inline-block;padding:6px 20px; margin: 10px auto; .border;.back-rgba-page; }
+ }
+ 
+ //内容部分
+ .margin-top20{.margin-top(20px); }
+ .about-me{ .padding;.back-rgba-b(0.05);
+     p{ font-weight: bold; font-size: 24px;}
+     span{display: block; line-height: 24px;}
+     li{margin-bottom: 10px;}
+     b{ display:inline-block; margin-right: 10px;}
+     button{.color-f;.transition;padding: 6px 30px;
+         &:hover{ .color-page; .back-color-f;}
+     }
+     .fa{font-size: 24px;margin-right: 10px; }
+ }
+
+ 
+ //项目
+ .project{
+     a:first-of-type{display: block;.pos-r; max-height: 300px;overflow: hidden;
+        &::after{.pos-a; display: block;opacity: 0; .transition;
+            content:' + '; .back-rgba-page; left: 0;top: 0;font-size: 30px; .width-height(100%);color: #F1F1F1; text-align: center;line-height: 300px;
+        }
+     }
+     a:hover{
+         &::after{opacity: 1;}
+         img{transform: scale(1.1);}
+     }
+     img{ width: 100%; .transition;
+     }
+     a:last-of-type{text-align: left;}
+     h4{display:block;padding: 15px 0;}
+     
+     
+ }
+ 
+ /*work*/
+ .works{ .back-rgba-page;
+  .swiper-slide {
+      .back-color-f;
+        width: 300px;
+        height: 300px;
+      a{display: block;}
+      figure{height:200px;overflow: hidden;width: 100%;
+         img{width: 100%;}
+      }
+    }
+   .border{display: block;margin: 20px auto; padding: 6px 10px ; .border; width: 200px; .back-color-f; .color-page; .transition;
+      &:hover{ .color-f;.back-color-page; }
+    }
+ }
+ .works-infor{.back-color-f; .padding;overflow: hidden;.color-page;
+    i{ display:block;float: left; .back-rgba-page;.color-f;  .width-height(30px);line-height: 30px;text-align: center; }
+    b{display: block; float: left;margin-left: 20px;   line-height: 34px;}
+    
+    
+ }
+ .swiper-pagination-bullet-active{ background: @color;}
+ 
+ 
+ 
+ //footer
+ 
+ 
+ 
+ footer{.back-color-page; .padding;.color-f;
+ li{.margin-bottom(10px);}
+    i{ display: inline-block; margin: 0 10px 0 0;}
+   .figures{
+       a{height: 60px; overflow: hidden;margin:3px; }
+       img{width: 50px;opacity: 0.6;
+         &:hover{opacity: 1;}
+       }
+   }
+ }
+ 
+ .else{
+     i{padding-top:5px; width: 30px;height: 30px;.back-color-f; .color-page; font-size: 20px;text-align: center;line-height: 20px; }
+ }
+ .blogs{
+     a{overflow: hidden;
+        &:hover{
+            img{opacity: 1;}
+        }
+     }
+     figure{.width-height(50px);overflow: hidden;float: left;}
+     img{width: 100%;opacity: 0.6;}
+     b{display: inline-block;margin-left: 10px; .color-f;float: left; line-height: 50px;}
+ }
+ 
+ 
+ 
+ 
+ //全部项目展示
+ .work-name{.margin-bottom(10px);
+     li{display: inline-block; margin: 0 10px 10px 0; padding: 6px 10px;.transition;cursor: pointer; .color-f;.back-rgba-page ; text-align: center;
+        &:hover{.back-color-page; }
+        &.active{ .back-color-page;}
+      }
+ }
+ .work-content{.works; .back-color-f;
+   a{display: block;}
+   figure{max-height: 190px;overflow: hidden;}
+   img{width: 100%;}
+   .works-infor{.border(1px,@color-rgba);border-top: none;}
+    >div{.margin-bottom;}
+ }
+ 
+ //回顶部
+ .top{
+     position: fixed;right:30px;bottom:30px;padding: 6px 10px;display: none; .back-rgba-page;.border(1px,#fff);.color-f;  border-radius:3px ;text-transform: capitalize;.transition;
+    &:hover{.color-f;.back-rgba-page;  }
+ }
+ 
+ /*关于我*/
+.about{
+    p:first-of-type::first-letter{display: block; font-size: 30px; }
+    p{line-height: 24px;}
+}
+ 
+ .show-img{.pos-r;margin-top:60px;
+     figure{ .pos-r;.width-height(200px); margin: 0 auto; background: url(../img/17.jpg) no-repeat center; .transition;transition-duration: 0.2s;
+       &::after{content: '';.pos-a;left: 0; top: 0;border:14px solid @color-rgba-f;.width-height(200px);border-radius: 50%;  }
+    }
+    &:hover{
+        figure{transform: translate(60px) scale(0.5); }
+        .words{ transform: translateX(250px);z-index: -1;opacity: 1;}
+    }
+ }
+ .words{.pos-a; left:-200px;top: 0;opacity: 0;
+     .width-height(200px);padding: 20px;.back-color-page; text-align: center; .color-f;.transition;transition-duration: 0.2s;
+ }
+ 
+ @media screen and (max-width:500px) {
+      .show-img{display: block;}
+ }
+ 
+ 
