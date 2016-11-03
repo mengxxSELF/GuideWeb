@@ -1,225 +1,234 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>私导资料</title>
-		<link rel="stylesheet" href="../../dest/css/bootstrap.min.min.css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">   
-		<link rel="stylesheet" href="../../dest/css/hover.min.css" />
-		<link rel="stylesheet" href="../../dest/css/swiper.min.css" />
-		<link rel="stylesheet" href="../../dest/css/style.min.css" />
-	</head>
-	<body class="guide-inf-page">
-		<header>
-			<nav class="navbar navbar-fixed-top">
-				<div class="container">
-                     <div class="container-fluid">
-                            <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                   <span class="sr-only">Toggle navigation</span>
-                                   <span class="icon-bar"></span>
-                                   <span class="icon-bar"></span>
-                                   <span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand" href="../../index.html"> <img src="../../dest/img/free.png" class="link-index" />  </a>
-                            </div>
-                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <ul class="nav navbar-nav">
-                                    <li><a href="#">私导申请</a></li>
-                                    <li><a href="http://blog.csdn.net/qq_31123547?viewmode=contents">Blog</a></li>
-                                </ul>
-                                <form class="navbar-form navbar-left" role="search">
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="想去哪里玩">
-                                    </div>
-                                    <a type="button" class="search hvr-rectangle-out">搜索</a>
-                                </form>
-                                <div class="nav-login pull-right">
-                                	<a href="#" class="order-g">私导预约    <img src="../../dest/img/guider.png" />    </a>
-                                	<a href="">注册/登陆</a>
-                                </div>
-                            </div><!-- /.navbar-collapse -->
-                     </div><!-- /.container-fluid -->
-				</div> 
-			</nav>
-		    <div class="banner">
-		    	<div class="cont">
-		    	  <div class="container">
-		    		<div class="row">
-		    			<div class="col-sm-12 col-md-6">
-		    				<figure class="img-circle img-thumbnail pull-left" > <img src="../../dest/img/guide-img.png" />  </figure>
-		    				<div class="guide-inf pull-left">
-		    					<h4>云水边静沐暖阳</h4>
-		    					<p class="star"> ****** </p>
-		    					<p> <b>english</b> <b> 한국어</b>   <b>français</b>  </p>
-		    					<a type="button" class="hvr-sweep-to-top" > 添加关注 </a>
-		    				</div>
-		    			</div>
-		    			<div class="col-sm-12 col-md-6">
-		    				<ul class="clearfix intro">
-		    					<li><strong>24</strong><span>私游文字</span></li>
-		    					<li><strong>35</strong><span>私游关注</span></li>
-		    					<li><strong>18</strong><span>私游评价</span></li>
-		    				</ul>
-		    			</div>
-		    		</div>
-		    	  </div>
-		    	</div>
-		    </div>
-		</header>
-		<div class="page-body">
-			<div class="check">
-				<div class="container">
-					<div class="row">
-						<div class="col-sm-6 col-md-3">
-							<img src="../../dest/img/guider.png" />   <b>私导审核</b><strong>审核通过</strong>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>私导资料</title>
+	<link rel="stylesheet" href="../../dest/css/bootstrap.min.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../dest/css/hover.min.css" />
+	<link rel="stylesheet" href="../../dest/css/swiper.min.css" />
+	<link rel="stylesheet" href="../../dest/css/style.min.css" />
+	<style>
+		@media screen and (max-width: 600px) {
+			.banner .cont{padding-top: 4em;} .banner figure{width: 100px;height: 100px;float: inherit !important; }
+			.container .row {text-align: center} .guide-inf h4{width:inherit;}
+			.banner .intro{width: inherit;float: inherit;margin: 10px auto 0;}
+			#canvasDiv{display: none}
+			.intr-write .swiper-slide{height: inherit;}
+		}
+	</style>
+</head>
+<body class="guide-inf-page">
+<header>
+	<nav class="navbar navbar-fixed-top">
+		<div class="container">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="../../index.html"> <img src="../../dest/img/free.png" class="link-index" />  </a>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li><a href="#">私导申请</a></li>
+						<li><a href="http://blog.csdn.net/qq_31123547?viewmode=contents">Blog</a></li>
+					</ul>
+					<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="想去哪里玩">
 						</div>
-						<div class="col-sm-6 col-md-3">
-							<img src="../../dest/img/i4_1.png" />   <b>个人认证</b><strong>审核通过</strong>
+						<a type="button" class="search hvr-rectangle-out">搜索</a>
+					</form>
+					<div class="nav-login pull-right">
+						<a href="#" class="order-g">私导预约    <img src="../../dest/img/guider.png" />    </a>
+						<a href="">注册/登陆</a>
+					</div>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</div>
+	</nav>
+	<div class="banner">
+		<div class="cont">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12 col-md-6 clearfix">
+						<figure class="img-circle img-thumbnail pull-left" > <img src="../../dest/img/guide-img.png" />  </figure>
+						<div class="guide-inf pull-left">
+							<h4>云水边静沐暖阳</h4>
+							<p class="star"> ****** </p>
+							<p> <b>english</b> <b> 한국어</b>   <b>français</b>  </p>
+							<a type="button" class="hvr-sweep-to-top" > 添加关注 </a>
 						</div>
-						<div class="col-sm-6 col-md-3">
-							<img src="../../dest/img/i8_1.png" />   <b>手机认证</b><strong>123*****775</strong>
-						</div>
-						<div class="col-sm-6 col-md-3">
-							<img src="../../dest/img/i9_1.png" />   <b>邮箱认证</b><strong>未认证</strong>
-						</div>
+					</div>
+					<div class="col-sm-12 col-md-6">
+						<ul class="clearfix intro">
+							<li><strong>24</strong><span>私游文字</span></li>
+							<li><strong>35</strong><span>私游关注</span></li>
+							<li><strong>18</strong><span>私游评价</span></li>
+						</ul>
 					</div>
 				</div>
 			</div>
-		    <div class="container introduce">
-		    	<div class="row">
-		    		<h2 class="title">私导信息  <img src="../../dest/img/information.png" />  </h2>	    
-		    		<div class="col-sm-12 col-md-8">
-		    			<div class="intr-guide bg-page-rgba">
-		    				<p>
-		    				鼓浪屿、曾厝垵、环岛路、南普陀、厦大......除了这些"有名"的景点，厦门还有什么呢？我会告诉你，其实还有很多，厦门真正的魅力，是这里的环境和生活。充满岭南风味的大同老街、美食购物一站式的中山路、安静文艺还有好咖啡的华新路、文艺舒适各种家庭旅馆的南华路、古老朴实的渔港沙坡尾.......你来，我带你一起看真正的厦门，并且用我的镜头全程跟拍，记录你在这里的每一个脚步，每一份映像，我们一起寻找最美的那个你！
-		    			    </p>
-		    			</div>
-		    			<div class="intr-write">
-		    				<!--
-                            	描述： swiper
-                            --> 
-		    				<div class="swiper-container">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="../../dest/img/11.jpg" />
-                                        <div class="img-infor">
-                                        	<b> 相遇 </b>
-                                        	<p> 旅行的本质就是在于遇见，如同这蜿蜒的路，无知何处来，无知何处去，只求在此刻，与你相遇 </p>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="../../dest/img/13.jpg" />
-                                        <div class="img-infor">
-                                        	<b> 剑心 </b>
-                                        	<p> 往后是阴霾 向前是山隘想逃也逃不开 命运再主宰执着的心不会更改哪管桑田 哪管沧海 </p>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="../../dest/img/15.jpg" />
-                                        <div class="img-infor">
-                                        	<b> Do you believe that </b>
-                                        	<p>Do you believe that? 能与你擦肩，我很欣喜 </p>
-                                        </div>
-                                    </div>
-		    				    </div>
-		    				    <div class="swiper-pagination"></div>
-                                <div class="swiper-button-next"> <i class="fa fa-chevron-right"></i> </div>
-                                <div class="swiper-button-prev"> <i class="fa fa-chevron-left"></i> </div>
-		    				</div>
-		    			</div>
-		    		</div>
-		    		<div class="col-sm-12 col-md-4">
-		    			<div class="data-to bg-page-rgba">
-		    				<p>私游城市  <b>厦门</b>   </p>  
-		    				<p>私游定价 <b>面议</b> </p>
-		    				<div id='canvasDiv'></div>
-		    				<a href="" type="button"  class="want-order hvr-overline-from-center">我要预约</a>
-		    			</div>
-		    			<div class="about-unsubscribe bg-page-rgba"></div>
-		    		</div>
-		    	</div>
-		    </div>
 		</div>
-		<footer>
-			<div class="container">
-				     <ul class="clearfix">
-                         <li><a href="myweb/div/index.html"> 关于我们 </a>|</li>
-                         <li><a href="myweb/div/index.html"> 媒体报道 </a> |</li>
-                         <li><a href="myweb/div/index.html"> 帮助中心 </a> |</li>
-                         <li><a href="myweb/div/index.html"> 联系我们 </a> |</li>
-                         <li><a href="myweb/div/index.html"> 服务事项 </a> |</li>
-                         <li><a href="myweb/div/index.html"> 隐私政策 </a> </li>
-                      </ul>
+	</div>
+</header>
+<div class="page-body">
+	<div class="check">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 col-md-3">
+					<img src="../../dest/img/guider.png" />   <b>私导审核</b><strong>审核通过</strong>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<img src="../../dest/img/i4_1.png" />   <b>个人认证</b><strong>审核通过</strong>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<img src="../../dest/img/i8_1.png" />   <b>手机认证</b><strong>123*****775</strong>
+				</div>
+				<div class="col-sm-6 col-md-3">
+					<img src="../../dest/img/i9_1.png" />   <b>邮箱认证</b><strong>未认证</strong>
+				</div>
 			</div>
-		</footer>
-		
-		<script type="text/javascript" src="../../dest/js/jquery-1.11.0.min.js" ></script>
-		<script type="text/javascript" src="../../dest/js/bootstrap.min.js" ></script>
-		<script type="text/javascript" src="../../dest/js/ichart.min.js" ></script>
-		<script type="text/javascript" src="../../dest/js/swiper.min.js" ></script>
-		
-		<script>
-		//右侧图表
-			$(function(){
-				var data = [
-				        	{name : '石狮',value : 0.73,color:'#6f83a5'},
-				        	{name : '厦门',value : 35.75,color:'#a5c2d5'},
-				        	{name : '黄梅',value : 29.84,color:'#cbab4f'},
-				        	{name : '武穴',value : 24.88,color:'#76a871'},
-				        	{name : '九江',value : 6.77,color:'#9f7961'},
-				        	{name : '莆田',value : 2.02,color:'#a56f8f'}
-			        	];
-	        	
-				new iChart.Pie2D({
-					render : 'canvasDiv',
-					data: data,
-					title: {
-						text : '私导足迹分布',
-						color : '#3e576f'
+		</div>
+	</div>
+	<div class="container introduce">
+		<div class="row">
+			<h2 class="title">私导信息  <img src="../../dest/img/information.png" />  </h2>
+			<div class="col-sm-12 col-md-8">
+				<div class="intr-guide bg-page-rgba">
+					<p>
+						鼓浪屿、曾厝垵、环岛路、南普陀、厦大......除了这些"有名"的景点，厦门还有什么呢？我会告诉你，其实还有很多，厦门真正的魅力，是这里的环境和生活。充满岭南风味的大同老街、美食购物一站式的中山路、安静文艺还有好咖啡的华新路、文艺舒适各种家庭旅馆的南华路、古老朴实的渔港沙坡尾.......你来，我带你一起看真正的厦门，并且用我的镜头全程跟拍，记录你在这里的每一个脚步，每一份映像，我们一起寻找最美的那个你！
+					</p>
+				</div>
+				<div class="intr-write">
+					<!--
+                        描述： swiper
+                    -->
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="../../dest/img/11.jpg" />
+								<div class="img-infor">
+									<b> 相遇 </b>
+									<p> 旅行的本质就是在于遇见，如同这蜿蜒的路，无知何处来，无知何处去，只求在此刻，与你相遇 </p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../../dest/img/13.jpg" />
+								<div class="img-infor">
+									<b> 剑心 </b>
+									<p> 往后是阴霾 向前是山隘想逃也逃不开 命运再主宰执着的心不会更改哪管桑田 哪管沧海 </p>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<img src="../../dest/img/15.jpg" />
+								<div class="img-infor">
+									<b> Do you believe that </b>
+									<p>Do you believe that? 能与你擦肩，我很欣喜 </p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-next"> <i class="fa fa-chevron-right"></i> </div>
+						<div class="swiper-button-prev"> <i class="fa fa-chevron-left"></i> </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-12 col-md-4">
+				<div class="data-to bg-page-rgba">
+					<p>私游城市  <b>厦门</b>   </p>
+					<p>私游定价 <b>面议</b> </p>
+					<div id='canvasDiv'></div>
+					<a href="" type="button"  class="want-order hvr-overline-from-center">我要预约</a>
+				</div>
+				<div class="about-unsubscribe bg-page-rgba"></div>
+			</div>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<ul class="clearfix">
+			<li><a href="myweb/div/index.html"> 关于我们 </a>|</li>
+			<li><a href="myweb/div/index.html"> 媒体报道 </a> |</li>
+			<li><a href="myweb/div/index.html"> 帮助中心 </a> |</li>
+			<li><a href="myweb/div/index.html"> 联系我们 </a> |</li>
+			<li><a href="myweb/div/index.html"> 服务事项 </a> |</li>
+			<li><a href="myweb/div/index.html"> 隐私政策 </a> </li>
+		</ul>
+	</div>
+</footer>
+
+<script type="text/javascript" src="../../dest/js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="../../dest/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="../../dest/js/ichart.min.js" ></script>
+<script type="text/javascript" src="../../dest/js/swiper.min.js" ></script>
+
+<script>
+	//右侧图表
+	$(function(){
+		var data = [
+			{name : '石狮',value : 0.73,color:'#6f83a5'},
+			{name : '厦门',value : 35.75,color:'#a5c2d5'},
+			{name : '黄梅',value : 29.84,color:'#cbab4f'},
+			{name : '武穴',value : 24.88,color:'#76a871'},
+			{name : '九江',value : 6.77,color:'#9f7961'},
+			{name : '莆田',value : 2.02,color:'#a56f8f'}
+		];
+
+		new iChart.Pie2D({
+			render : 'canvasDiv',
+			data: data,
+			title: {
+				text : '私导足迹分布',
+				color : '#3e576f'
+			},
+			legend : {
+				enable : false  // 显示小方块莫
+			},
+			sub_option : {
+				label : {
+					background_color:null,
+					sign:false,//设置禁用label的小图标
+					padding:'0 0',
+					border:{
+						enable:false,
+						color:'#666666'
 					},
-					legend : {
-						enable : false  // 显示小方块莫
-					},
-					sub_option : {
-						label : {
-							background_color:null,
-							sign:false,//设置禁用label的小图标
-							padding:'0 0',
-							border:{
-								enable:false,
-								color:'#666666'
-							},
-							fontsize:11,
-							fontweight:600,
-							color : '#826650'
-						},
-						border : {
-							width :0,
-							color : '#ffffff'
-						}
-					},
-					animation:true,
-					showpercent:true,
-					decimalsnum:2,
-					width :320,
-					height :200,
-					radius:140
-				}).draw();
-			});
-		
-		</script>
-    <script> 
-		 //swipe
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        paginationClickable: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        spaceBetween: 30
-    });
-    </script>
-		
-	</body>
+					fontsize:11,
+					fontweight:600,
+					color : '#826650'
+				},
+				border : {
+					width :0,
+					color : '#ffffff'
+				}
+			},
+			animation:true,
+			showpercent:true,
+			decimalsnum:2,
+			width :320,
+			height :200,
+			radius:140
+		}).draw();
+	});
+
+</script>
+<script>
+	//swipe
+	var swiper = new Swiper('.swiper-container', {
+		pagination: '.swiper-pagination',
+		paginationClickable: '.swiper-pagination',
+		nextButton: '.swiper-button-next',
+		prevButton: '.swiper-button-prev',
+		spaceBetween: 30
+	});
+</script>
+
+</body>
 </html>
