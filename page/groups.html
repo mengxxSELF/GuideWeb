@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name='viewport' content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0" />
+		<title>私游目的地</title>
+		<link rel="stylesheet" href="../dest/css/bootstrap.min.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			.fade{opacity: 1;display: block !important;}
+			.modal-content{ background: none; box-shadow: none; border: none;}
+		</style>
+	</head>
+	<body ng-app='app'>
+		<div class="page-setting page-bg" ng-controller='myc'>
+			<header class="">
+				<ul class="head-list row bg-black">
+					<li class="col-xs-3"> <a class="menu"><img src="img/iconMenu.png" /> </a>  </li>
+					<li class="col-xs-5 page-title">私游目的地</li>
+				</ul>
+			</header>
+			<!-- Modal -->
+<div class="fade"  tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="search-fri">
+				<input type="text" id="filter"  placeholder="搜索目的地" />
+		</div>
+      </div>
+      <div class="modal-body">
+			<ul class="date-lists container">
+				<p>按照可预约导游人数排列城市顺序</p>
+				<li class="list-children jcorgFilterTextParent" ng-repeat='item in listname'>
+					<b class="icon-do">{{item.done}} </b> <span class="done-title jcorgFilterTextChild"> {{ item.title }} </span>
+				</li>
+			</ul>
+      </div>
+    </div>
+ </div>
+ 
+			
+			
+		</div> 
+		<div class="page-navs page-bg">
+			<header>
+				<ul class="head-list row">
+					<li class="col-xs-3"> <a class="close-menu"><img src="img/iconClose.png" /> </a>  </li>
+					<li class="col-xs-6"></li>
+					<li class="col-xs-3">  <a><img src="img/iconLogout.png" /></a>  </li>
+				</ul>
+				<img src="img/Avatar.png" class="img-circle img-use-img" />
+			</header>
+			<div class="nav-list row">
+				<div class="col-xs-6">
+					<a href="home.html" class="index">登陆/注册</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="calendar.html" class="calendar">私导分类</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="overview.html" class="overview">私游排行</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="groups.html" class="groups">私导目的地</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="users.html" class="users">用户行程</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="profile.html" class="profile">私导详情</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="timeline.html" class="timeline">私导排行</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="settings.html" class="settings">个人中心</a>
+				</div>
+			</div>
+	   </div>
+	    
+		 
+		 
+		 <script type="text/javascript" src="../dest/js/jquery-1.11.0.min.js" ></script>
+		 <script>
+		    $(".page-bg").css("height",$(window).height())
+		    $(".menu").on("click",function  () {
+		    	console.log("dd")
+		    	$(".page-navs").show().animate({
+		    		left:0
+		    	},'slow')
+		    })
+		    $(".close-menu").on("click",function  () {
+		    	$(".page-navs").animate({
+		    		left:-600
+		    	},function  () {
+		    		$(".page-navs").hide()
+		    	})
+		    })
+		 </script>
+		 <script type="text/javascript" src="js/angular.js" ></script>
+		 <script>
+		 	angular.module("app",[])
+		 	.controller('myc',function  ($scope) {
+		 		$scope.listname=[
+		 		   {id:1,title:'上海',done:'20'},
+		 		   {id:2,title:'天津',done:'18'},
+		 		   {id:3,title:'厦门',done:'14'},		 		   
+		 		   {id:4,title:'海南',done:'14'},		 		   
+		 		   {id:5,title:'济南',done:'3'},	
+		 		   {id:6,title:'福建',done:'3'},			 		   
+		 		   {id:7,title:'秦皇岛',done:'1'},
+		 		   {id:7,title:'成都',done:'1'},		 		   
+		 		   {id:7,title:'贵阳',done:'1'},		 		   
+		 		   {id:7,title:'无锡',done:'1'},
+		 		   {id:7,title:'洛阳',done:'1'},		 		   
+		 		   {id:7,title:'哈尔滨',done:'1'}	 		   
+		 		]
+		 	})
+		 </script>
+		 <script type="text/javascript" src="../dest/js/bootstrap.min.js" ></script>
+        <script type="text/javascript" src="js/jcfilter.js"></script>		
+		<script type="text/javascript">
+	    /*点击搜索*/
+		jQuery(document).ready(function(){
+			jQuery("#filter").jcOnPageFilter({
+				animateHideNShow: true,
+				focusOnLoad:true,
+				highlightColor:'#ebf371',
+				textColorForHighlights:'#000000',
+				caseSensitive:false,
+				hideNegatives:true,
+				parentLookupClass:'jcorgFilterTextParent',
+				childBlockClass:'jcorgFilterTextChild'
+			});
+		});          
+		
+		$(".list-child").click(function  () {
+			window.open("timeline.html")
+		})
+		
+	    </script>
+		 
+	</body>
+</html>

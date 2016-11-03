@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html ng-app="timeline">
+	<head >
+		<meta charset="utf-8">
+		<meta name='viewport' content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0" />
+		<title>选择私导</title>
+		<link rel="stylesheet" href="../dest/css/bootstrap.min.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body ng-controller="myc">
+		<div class="page-timeline page-bg">
+			<header class="">
+				<ul class="head-list row bg-black">
+					<li class="col-xs-3"> <a class="menu"><img src="img/iconMenu.png" /> </a>  </li>
+					<li class="col-xs-6 page-title">选择私导</li>
+				</ul>
+				<img src="img/Avatar.png" class="img-circle img-use-img imgs-use" />
+			</header>
+			<div class="timeline">
+				<div class="time-when row">
+					<p class="day-week col-xs-6"> 私导排行 </p>
+					<p class="month col-xs-6">  </p>
+				</div>
+				<ul class="timeline-group container">
+					<li class="time-item " ng-repeat="item in linelist" ng-cloak  ng-class="{'did-list': item.did=='yes' }" 
+					>
+					<a href="profile.html" class="row">
+						<div class="col-xs-6 date-time" >
+							{{item.time}}
+						</div>
+						<div class="col-xs-6 ">
+							<span >${{item.money}} (小时) </span>
+						</div>
+						<div class="introduce col-xs-12">
+							{{item.mes}}
+							<img ng-src="{{item.imgsrc}}" class="date-who"  />
+						</div>
+					 </a>
+					</li>
+				</ul> 
+			</div>
+		</div> 
+		<div class="page-navs page-bg">
+			<header>
+				<ul class="head-list row">
+					<li class="col-xs-3"> <a class="close-menu"><img src="img/iconClose.png" /> </a>  </li>
+					<li class="col-xs-6"></li>
+					<li class="col-xs-3">  <a><img src="img/iconLogout.png" /></a>  </li>
+				</ul>
+				<img src="img/Avatar.png" class="img-circle img-use-img" />
+			</header>
+			<div class="nav-list row">
+				<div class="col-xs-6">
+					<a href="home.html" class="index">登陆/注册</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="calendar.html" class="calendar">私导分类</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="overview.html" class="overview">私游排行</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="groups.html" class="groups">私导目的地</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="users.html" class="users">用户行程</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="profile.html" class="profile">私导详情</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="timeline.html" class="timeline">私导排行</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="settings.html" class="settings">个人中心</a>
+				</div>
+			</div>
+	   </div>
+	    
+		 
+		 
+		 
+		 <script type="text/javascript" src="../dest/js/jquery-1.11.0.min.js" ></script>
+		 <script>
+		 console.log( $("body").height() );
+		    $(".page-navs").css("height",$("body").height())
+		    $(".menu").on("click",function  () {
+		    	console.log("dd")
+		    	$(".page-navs").show().animate({
+		    		left:0
+		    	},'slow')
+		    })
+		    $(".close-menu").on("click",function  () {
+		    	$(".page-navs").animate({
+		    		left:-600
+		    	},function  () {
+		    		$(".page-navs").hide()
+		    	})
+		    })
+		    var data = new Date();
+		    $(".month").text( data.toLocaleDateString() );
+		 </script>
+		 <script type="text/javascript" src="js/angular.js" ></script>
+		 <script>
+		 	angular.module("timeline",[])
+		 	.controller("myc",function  ($scope) {
+		 		$scope.linelist=[
+		 		   {time:'可接单' , money:"70" , imgsrc:'img/Avatar2.png' , mes:'英语 韩语' ,  did:'yes' },
+		 		   {time:'无法接单' , money:"50" ,imgsrc:"img/Avatar3.png", mes:'英语 意大利语' ,did:'no' },		 		   
+		 		   {time:'可接单' , money:"30" ,imgsrc:'img/Avatar.png', mes:'英语  日语' ,did:'yes' },
+		 		   {time:'可接单' , money:"90" , imgsrc:'img/Avatar3.png' , mes:' 英语 韩语 日语'  ,did:'yes'},		 		   
+		 		   {time:'可接单' , money:"60" ,imgsrc:'img/Avatar.png', mes:'英语' ,did:'yes' },
+		 		   {time:'可接单' , money:"20" ,imgsrc:'img/Avatar3.png' , mes:' 英语 '  ,did:'yes'}			 		   
+		 		]
+		 	})
+		 </script>
+		 
+	</body>
+</html>

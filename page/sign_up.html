@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>login</title>
+		<link rel="stylesheet" href="../dest/css/bootstrap.min.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body ng-controller="myc">
+		<div class="page-sign-up page-bg">
+			<header>
+				<ul class="head-list row">
+					<li class="col-xs-3"> <a href="index.html"> <img src="img/iconBack.png" /> </a>  </li>
+					<li class="col-xs-6"></li>
+					<li class="col-xs-3"> <a href="sign_up.html"><img src="img/iconCamera.png" /></a>   </li>
+				</ul>
+				<img src="img/Avatar.png" class="img-circle img-use" />
+			</header>
+			<div class="sign-login">
+				<div class="row">
+					<a href="" class="col-xs-6 a-sign" title="group-sign-in">sign in</a>
+					<a href="" class="col-xs-6 a-sign a-now" title="group-sign-up">sign up</a>
+				</div>
+				<div class="a-cont">
+					<ul class="list-group group-sign-in">
+						<li class="list-item">
+							<label class="user-name">
+								<input type="text" placeholder="username" ng-model="uname" />
+							</label>
+						</li>
+						<li class="list-item">
+							<label class="pass-word">
+								<input type="password" placeholder="password" ng-model="pwd" />
+							</label>
+						</li>						
+					</ul>
+					<ul class="list-group group-sign-up">
+						<li class="list-item">
+							<label class="user-name">
+								<input type="text" placeholder="username" />
+							</label>
+						</li>
+						<li class="list-item">
+							<label class="pass-word">
+								<input type="password" placeholder="password" />
+							</label>
+						</li>		
+						<li class="list-item">
+							<label class="email">
+								<input type="email" placeholder="email" />
+							</label>
+						</li>
+						<li class="list-item">
+							<label class="bir">
+								<input type="text" placeholder="brithday" />
+							</label>
+						</li>		
+					</ul>
+				</div>
+				<div class="btn-foot">
+					<button class="btn btn-all" ng-click="sumb()">continue</button>
+					<button class="btn btn-success" ng-show="mess.length>0">{{mess}}</button>
+					<p>Terms & Conditions</p>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../dest/js/jquery-1.11.0.min.js" ></script>
+	    <script type="text/javascript" src="js/angular.js" ></script>
+		<script>
+			$(".page-bg").css("min-height",$(window).height());
+			
+			$(".a-sign").each(function  () {
+				$(this).click(function  (e) {
+					e.preventDefault();
+					$(".a-now").removeClass("a-now");
+					$(this).addClass("a-now");
+					var get_t = $(this).attr("title");
+					$(".list-group").hide();
+					$("."+get_t).show();
+			        $(".page-bg").css("min-height",$(window).height());					
+				})
+			})
+			
+		</script>
+		<script>
+		    angular.module("app",[])
+		    .controller("myc",function  ($scope) {
+		    	$scope.uname=""
+		    	$scope.pwd=""
+		    	$scope.mess=""
+		    	$scope.sumb=function  () {
+		    		if ($scope.uname=="admin" &&  $scope.pwd=="login" ) {
+		    			$scope.mess="success"
+		    		} else{
+		    			$scope.mess="failure"
+		    		}
+		    	}
+		    })
+		</script>
+	</body>
+</html>

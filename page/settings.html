@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name='viewport' content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0" />
+		<title>settings</title>
+		<link rel="stylesheet" href="../dest/css/bootstrap.min.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="page-setting page-bg">
+			<header class="">
+				<ul class="head-list row bg-black">
+					<li class="col-xs-3"> <a class="menu"><img src="img/iconMenu.png" /> </a>  </li>
+					<li class="col-xs-6 page-title">个人中心</li>
+					<li class="col-xs-3">  <a><img src="img/iconCamera.png" /></a>  </li>
+				</ul>
+				<img src="img/Avatar.png" class="img-circle img-use-img" />
+			</header>
+			<ul class="list-group">
+				<li class="list-item"><a href="personal.html">
+						<p class="title">个人资料</p>
+						<p class="icon-right"></p>
+					</a></li>
+				<li class="list-item move-move"><a href="">
+						<p class="title">开启提醒</p>
+						<p class="icon-right right-move">
+							<b class="move-body">
+						       <b class="move-circle"></b>			
+							</b>
+						</p>
+					</a></li>
+				<li class="list-item"><a href="">
+						<p class="title">sounds</p>
+						<p class="icon-right"></p>
+					</a></li>
+				<li class="list-item"><a href="">
+						<p class="title">settings</p>
+						<p class="icon-right"></p>
+					</a></li>
+				<li class="list-item"><a href="">
+						<p class="title">私导区域</p>
+						<p class="icon-right">港澳台</p>
+					</a></li>
+				<li class="list-item"><a href="">
+						<p class="title">语言</p>
+						<p class="icon-right">英语 汉语</p>
+					</a></li>
+				<li class="list-item"><a href="" >
+						<p class="title">pricacy</p>
+						<p class="icon-right"></p>
+					</a></li>
+			</ul>
+		</div> 
+		<footer class="bg-black">
+			<a type="button" class="logout" ><img src="img/iconLogout2.png" /> </a>
+		</footer>
+		<div class="page-navs page-bg">
+			<header>
+				<ul class="head-list row">
+					<li class="col-xs-3"> <a class="close-menu"><img src="img/iconClose.png" /> </a>  </li>
+					<li class="col-xs-6"></li>
+					<li class="col-xs-3">  <a><img src="img/iconLogout.png" /></a>  </li>
+				</ul>
+				<img src="img/Avatar.png" class="img-circle img-use-img" />
+			</header>
+			<div class="nav-list row">
+				<div class="col-xs-6">
+					<a href="home.html" class="index">登陆/注册</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="calendar.html" class="calendar">私导分类</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="overview.html" class="overview">私游排行</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="groups.html" class="groups">私导目的地</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="users.html" class="users">用户行程</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="profile.html" class="profile">私导详情</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="timeline.html" class="timeline">私导排行</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="settings.html" class="settings">个人中心</a>
+				</div>
+			</div>
+	   </div>
+	    
+		 
+		 
+		 
+		 <script type="text/javascript" src="../dest/js/jquery-1.11.0.min.js" ></script>
+		 <script>
+		 	$(".list-item a").addClass("clearfix");
+		 	$(".move-move").click(function (e) {
+		 		e.preventDefault();
+		 	})
+		 	
+		 	$(".right-move").click(function  () {
+		 		$(this).toggleClass("move-now");
+		 	})
+		 </script>
+		 <script>
+		    $(".page-navs").css("height",$(window).height())
+		    $(".menu").on("click",function  () {
+		    	console.log("dd")
+		    	$(".page-navs").show().animate({
+		    		left:0
+		    	},'slow')
+		    })
+		    $(".close-menu").on("click",function  () {
+		    	$(".page-navs").animate({
+		    		left:-600
+		    	},function  () {
+		    		$(".page-navs").hide()
+		    	})
+		    })
+		   
+		 </script>
+		 
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+	    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no" />
+		<title>login</title>
+		<link rel="stylesheet" href="../dest/css/bootstrap.min.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="page-sign page-bg">
+			<header>
+				<img src="img/Logo.png" class="logo" />
+			</header>
+			<div class="sign-login">
+				<div class="row">
+					<a href="" class="col-xs-6 a-now a-sign" title="group-sign-in">登陆</a>
+					<a href="" class="col-xs-6 a-sign" title="group-sign-up">注册</a>
+				</div>
+				<div class="a-cont">
+					<ul class="list-group group-sign-in">
+						<li class="list-item">
+							<label class="user-name">
+								<input type="text" placeholder="用户名" name="uname" />
+							</label>
+						</li>
+						<li class="list-item">
+							<label class="pass-word">
+								<input type="password" placeholder="密码" name="pwd" />
+							</label>
+						</li>
+						<a class="btn btn-all" type="button" href="home.html">continue</a>
+					</ul>
+					<ul class="list-group group-sign-up">
+						<li class="list-item">
+							<label class="user-name">
+								<input type="text" placeholder="用户名" />
+							</label>
+						</li>
+						<li class="list-item">
+							<label class="pass-word">
+								<input type="password" placeholder="密码" />
+							</label>
+						</li>		
+						<li class="list-item">
+							<label class="email">
+								<input type="email" placeholder="邮箱" />
+							</label>
+						</li>
+						<li class="list-item">
+							<label class="bir">
+								<input type="text" placeholder="生日" />
+							</label>
+						</li>	
+						<div class="btn-foot">
+					        <a class="btn btn-all" type="button" href="home.html">continue</a>
+					        <a href="calendar.html">forgot password</a>
+				        </div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		
+	    <script type="text/javascript" src="../dest/js/jquery-1.11.0.min.js" ></script>
+		<script>
+			$(".page-bg").css("min-height",$(window).height());
+			
+			$(".a-sign").each(function  () {
+				$(this).click(function  (e) {
+					e.preventDefault();
+					$(".a-now").removeClass("a-now");
+					$(this).addClass("a-now");
+					var get_t = $(this).attr("title");
+					$(".list-group").hide();
+					$("."+get_t).show();
+			        $(".page-bg").css("min-height",$(window).height());					
+				})
+			})
+			
+			
+			
+		</script>
+	</body>
+</html>

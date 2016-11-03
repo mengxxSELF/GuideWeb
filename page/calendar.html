@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html ng-app="timeline">
+	<head >
+		<meta charset="utf-8">
+		<meta name='viewport' content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0" />
+		<title>calendar</title>
+		<link rel="stylesheet" href="../dest/css/bootstrap.min.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body ng-controller="myc">
+		<div class="page-calendar page-bg">
+			<header class="">
+				<ul class="head-list row bg-black">
+					<li class="col-xs-3"> <a class="menu"><img src="img/iconMenu.png" /> </a>  </li>
+					<li class="col-xs-6 page-title">私导方向</li>
+					<li class="col-xs-3">  <a><img src="img/iconCamera.png" /></a>  </li>
+				</ul>
+			</header>
+			<div class="calendar">
+				<ul class="calendar-group calendar container">
+					<li class="calendar-item row" ng-repeat="item in linelist" ng-cloak
+					>
+						<div class="col-xs-6 calendar-img" >
+							<img ng-src='{{item.imgsrc}}' />
+						</div>
+						<div class="col-xs-6 calendar-exp">
+							<p>{{item.mes}}</p>
+							<span>{{item.numb}}</span>
+						</div>
+					</li>
+				</ul> 
+			</div>
+		</div> 
+		<footer class="bg-black icons ">
+			<ul class="row">
+				<li class="col-xs-2"><a href=""><img src="img/iconCalendar.png" alt="" /></a></li>
+				<li class="col-xs-2"><a href=""><img src="img/iconOverview.png" alt="" /></a></li>
+				<li class="col-xs-4"><a href="" class="iconadd logout"><img src="img/iconAdd.png" alt="" /></a></li>
+				<li class="col-xs-2"><a href=""><img src="img/iconLists.png" alt="" /></a></li>
+				<li class="col-xs-2"><a href=""><img src="img/IconTime.png" alt="" /></a></li>
+			</ul>	
+		</footer>
+		<div class="page-navs page-bg">
+			<header>
+				<ul class="head-list row">
+					<li class="col-xs-3"> <a class="close-menu"><img src="img/iconClose.png" /> </a>  </li>
+					<li class="col-xs-6"></li>
+					<li class="col-xs-3">  <a><img src="img/iconLogout.png" /></a>  </li>
+				</ul>
+				<img src="img/Avatar.png" class="img-circle img-use-img" />
+			</header>
+			<div class="nav-list row">
+				<div class="col-xs-6">
+					<a href="home.html" class="index">登陆/注册</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="calendar.html" class="calendar">私导分类</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="overview.html" class="overview">私游排行</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="groups.html" class="groups">私导目的地</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="users.html" class="users">用户行程</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="profile.html" class="profile">私导详情</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="timeline.html" class="timeline">私导排行</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="settings.html" class="settings">个人中心</a>
+				</div>
+			</div>
+	   </div>
+	    
+		 
+		 <script type="text/javascript" src="../dest/js/jquery-1.11.0.min.js" ></script>
+		 
+		 <script>
+		    $(".page-navs").css("height",$(window).height());
+		    $(".page-calendar").css("height",$(window).height());		    
+		    $(".menu").on("click",function  () {
+		    	console.log("dd")
+		    	$(".page-navs").show().animate({
+		    		left:0
+		    	},'slow')
+		    })
+		    $(".close-menu").on("click",function  () {
+		    	$(".page-navs").animate({
+		    		left:-600
+		    	},function  () {
+		    		$(".page-navs").hide()
+		    	})
+		    })
+		 </script>
+		 <script type="text/javascript" src="js/angular.js" ></script>
+		 <script>
+		 	angular.module("timeline",[])
+		 	.controller("myc",function  ($scope) {
+		 		$scope.linelist=[
+		 		   {numb:'42' , imgsrc:'img/Image3.png' , mes:'美食' },
+		 		   {numb:'102' , imgsrc:'img/Image1.png' , mes:'风景' },		 		   
+		 		   {numb:'56', imgsrc:'img/Image2.png', mes:'人文古迹'}
+		 		]
+		 	})
+		 </script>
+		 
+	</body>
+</html>

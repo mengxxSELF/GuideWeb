@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width",initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0  />
+		<title>users</title>
+		<link rel="stylesheet" href="../dest/css/bootstrap.min.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="../dest/css/swiper.min.css" />
+	</head>
+	<body>
+		<div class="page-setting page-bg">
+			<header class="">
+				<ul class="head-list row bg-black">
+					<li class="col-xs-3"> <a class="menu"><img src="img/iconMenu.png" /> </a>  </li>
+					<li class="col-xs-6 page-title">用户私游安排</li>
+					<li class="col-xs-3">  <a class="ellipese"><img src="img/iconEllipses.png" /></a>  </li>
+				</ul>
+			</header>
+			<div class="swiper-container">
+                 <div class="swiper-wrapper">
+                    <div class="swiper-slide ">
+                      	 <div class="time-head">
+                      	 	<p class="day-week"> THURSDAY</p>
+                      	 	<h3 class="day">17</h3>
+                      	 	<p class="month-day">march 2015</p>
+                      	 </div>
+                    </div>
+                    <div class="swiper-slide">
+                      	 <div class="time-head">
+                      	 	<p>THURSDAY</p>
+                      	 	<h3>18</h3>
+                      	 	<p>march 2015</p>
+                      	 </div>
+                    </div>
+                 </div>
+                 <div class="swiper-button-next"></div>
+                 <div class="swiper-button-prev"></div>
+			</div>
+	        <ul class="list-group data-new ">
+				<li class="list-item">
+					<label class="data-name">
+					    <input type="text" placeholder="请输入事项名称" />
+					</label>
+				</li>
+				<li class="list-item">
+					<label class="data-name-detail">
+						<input type="text" placeholder="请输入私游地址" />
+					</label>
+				</li>
+			   <li class="list-item half-time clearfix">
+	             <label class="half">
+		               <input type="text" placeholder="开始时间" />
+	             </label>
+	             <label class="half next-half">
+	                	<input type="text" placeholder="结束时间" />
+	              </label>
+			    </li>
+                <li class="list-item ">
+	              <label >
+		                <input type="text" placeholder="私导名称" />
+	              </label>
+                </li>
+                <li class="list-item data-img">
+	                <img src="img/Avatar2.png" /> <img src="img/Avatar3.png" />
+                </li>
+                <li class="list-item minute">
+                	<span>20 minutes before</span>
+                	<span class="notice-way">具体事项</span>
+                </li>
+	        </ul>
+		</div>
+		<footer class="bg-black">
+			<a type="button" class="logout" ><img src="img/iconCheckbg.png" /> </a>
+		</footer>
+		<div class="page-navs page-bg">
+			<header>
+				<ul class="head-list row">
+					<li class="col-xs-3"> <a class="close-menu"><img src="img/iconClose.png" /> </a>  </li>
+					<li class="col-xs-6"></li>
+					<li class="col-xs-3">  <a><img src="img/iconLogout.png" /></a>  </li>
+				</ul>
+				<img src="img/Avatar.png" class="img-circle img-use-img" />
+			</header>
+			<div class="nav-list row">
+				<div class="col-xs-6">
+					<a href="home.html" class="index">登陆/注册</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="calendar.html" class="calendar">私导分类</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="overview.html" class="overview">私游排行</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="groups.html" class="groups">私导目的地</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="users.html" class="users">用户行程</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="profile.html" class="profile">私导详情</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="timeline.html" class="timeline">私导排行</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="settings.html" class="settings">个人中心</a>
+				</div>
+			</div>
+	   </div>
+	    
+		
+		
+		
+		
+		<script type="text/javascript" src="../dest/js/jquery-1.11.0.min.js" ></script>
+		<script type="text/javascript" src="js/swiper.js" ></script>
+		<script>
+		$(".page-bg").css("min-height",$(window).height())
+			 var swiper = new Swiper('.swiper-container', {
+                 pagination: '.swiper-pagination',
+                 paginationClickable: '.swiper-pagination',
+                 nextButton: '.swiper-button-next',
+                 prevButton: '.swiper-button-prev',
+                 spaceBetween: 30
+            });
+		</script>
+		<script>
+		    $(".page-navs").css("height",$(window).height())
+		    $(".menu").on("click",function  () {
+		    	console.log("dd")
+		    	$(".page-navs").show().animate({
+		    		left:0
+		    	},'slow')
+		    })
+		    $(".close-menu").on("click",function  () {
+		    	$(".page-navs").animate({
+		    		left:-600
+		    	},function  () {
+		    		$(".page-navs").hide()
+		    	})
+		    })
+		   
+		 </script>
+	</body>
+</html>
